@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>authorization</title>
-<link href="style.css?33e02c39d4ad78a8228f" rel="stylesheet"></head>
-<body>
-<button id="myBtn">Open</button><!--delete it!-->
-<div id="form-popup" class="popup">
-    <div class="popup-content">
-        <div class="close-btn-container"><div class="close-btn-wrapper"><span class="close-btn"> &#10006;</span></div></div>
-        <div class="popup-wrapper">
-            <div class="popup-header">
-                <div class="popup-progress"></div>
-                <p>Почти готово! Пожалуйста, заполните эту форму и нажмите кнопку нижу, чтобы участвовать в онлайн
-                    мастер-классе</p></div>
-            <div class="popup-body">
-                <form class="popup-form" action="#" method="get">
-                    <label class="form-name">Да, Я <span>(введите ваше имя)</span>
-                        <input type="text" name="name" placeholder="Снежана">
-                        <br>хочу участвовать в Онлайн Мастер-Класс и получить PDF-список "ТОП50 товаров из Китая",
-                        которые можно продать в СНГ с наценкой 300%
-                    </label><br>
-                    <label class="form-email">Вышлите мне доступ на <span>E-mail</span>
-                        <input type="email" name="email" placeholder="example@gmail.com">
-                    </label><br>
-                    <label class="form-phone">Чтобы я 100% не забыл, пришлите мне СМС-напоминание на этот моб. тел. <br><span>(введите номер)</span>:<div class="form-phone--flag"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/64px-Flag_of_Ukraine.png" alt="flag"></div>
-                        <input type="text" name="phone" placeholder="+79 000 000 00 00">
-                    </label>
-                    <div class="error-text"></div>
-                    <button class="form-submit" type="submit" id="sub_form">участвовать в мастер-классе</button>
-                </form>
-            </div>
-            <div class="popup-footer">
-                <div class="footer-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-                        <path d="M471.16 10.4c-61.15 7.69-115.96 33.46-158.84 74.42-40 38.08-65.96 83.46-79.04 137.11-4.81 20.38-5 23.27-6.15 101.73l-1.15 80.77-9.62 1.35c-34.61 5-69.23 30.19-84.81 62.11-12.88 26.54-12.31 16.15-12.31 229.42 0 214.23-.58 203.07 12.88 230 8.65 17.11 30.96 40 48.08 48.84 6.54 3.46 18.46 7.89 26.73 10 14.42 3.65 22.31 3.85 291.92 3.85 307.11 0 291.15.58 318.45-12.69 19.42-9.61 40.96-30.96 50.77-50.19 13.08-26.35 12.69-17.31 12.69-229.8 0-130.96-.58-195-2.12-201.92-3.27-15.96-15.58-39.61-27.5-52.88-17.31-19.04-43.65-33.27-67.5-36.73l-9.61-1.35-1.15-78.84c-1.16-85.58-1.92-93.07-13.27-128.07C737.69 130.8 689.23 73.69 626.54 41c-40.38-20.96-74.42-29.81-119.8-30.77-15.78-.4-31.93-.21-35.58.17zm64.61 57.5c48.08 8.46 87.11 29.42 121.73 65.38 23.27 24.23 37.88 48.46 48.65 79.81 10 29.61 11.15 41.92 11.15 119.42v70.96H282.5l.58-78.46.77-78.27 5.38-19.23c10-36.54 27.5-67.31 53.27-94.23 26.54-27.5 53.27-45 87.31-56.54 33.46-11.53 72.11-14.61 105.96-8.84zm254.99 397.68c6.35 3.08 14.61 9.42 19.62 15 15.58 17.31 14.81 3.85 14.23 219.22l-.58 191.15-4.42 9.04c-5.77 11.54-17.12 22.88-28.85 28.65l-9.04 4.62H218.28l-9.04-4.62c-11.54-5.58-23.08-16.73-28.85-27.5l-4.42-8.27-.58-192.11c-.58-214.99-1.35-202.69 13.27-219.23 9.04-10.38 18.65-16.54 30.58-19.62 6.73-1.92 70.77-2.31 284.61-2.12l275.95.41 10.96 5.38z"/>
-                        <path d="M479.42 590.2c-11.92 4.62-24.61 16.73-30.19 28.65-2.88 6.35-4.04 12.31-3.85 23.08 0 17.88 5.96 30.77 19.04 41.54l8.65 7.31V740c0 45.19.38 49.42 3.85 55.19 9.81 16.35 36.35 16.35 46.15 0 3.46-5.77 3.85-10 3.85-55.19v-49.23l8.27-6.73c4.42-3.85 10.58-11.54 13.85-17.31 7.5-13.84 8.08-34.42 1.35-48.08-13.08-26.72-43.47-39.03-70.97-28.45z"/>
-                    </svg>
-                </div>
-                <p>100% защита даных от 3-х лиц</p>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TODO List</title>
+  <link href="style.css?745ff5ba0b29236fb4a5" rel="stylesheet"></head>
+  <body>
+    <section class="header">TODOList</section>
+    <section class="content">
+      <div class="navigation">
+        <form class="navigation__search">
+          <input
+            type="text"
+            class="navigation__search-input"
+            placeholder="search by title"
+          />
+          <input type="text" class="navigation__search_filter-status" />
+          <input type="text" class="navigation__search_filter-priority" />
+        </form>
+        <button class="navigation__button-create">Create</button>
+      </div>
+      <div class="cards-list">
+        <div class="card">
+          <div class="card-title">some title</div>
+          <div class="card-content">some text text text</div>
         </div>
-    </div>
-
-</div>
-<script src="main.js"></script>
-<script type="text/javascript" src="build.js?33e02c39d4ad78a8228f"></script></body>
+      </div>
+    </section>
+    <section class="footer">Oleh Hnapovskyi</section>
+    <script src="main.js"></script>
+  <script type="text/javascript" src="build.js?745ff5ba0b29236fb4a5"></script></body>
 </html>
