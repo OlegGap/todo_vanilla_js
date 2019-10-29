@@ -9,6 +9,7 @@
   <body>
     <section class="header">TODOList</section>
     <section class="content">
+      <!-- NAVIGATION BEGIN-->
       <div class="navigation">
         <form class="navigation__search">
           <input
@@ -16,17 +17,59 @@
             class="navigation__search-input"
             placeholder="search by title"
           />
-          <input type="text" class="navigation__search_filter-status" />
-          <input type="text" class="navigation__search_filter-priority" />
+          <div class="navigation__search_filter-status">
+            <div class="navigation__search_filter-status-button">
+              all
+              <div class="navigation__search_filter-status-button__icon">
+                &#9650;
+              </div>
+            </div>
+            <div class="navigation__search_filter-status-content">
+              <span>open</span>
+              <span>done</span>
+            </div>
+          </div>
+          <div class="navigation__search_filter-priority">
+            <div class="navigation__search_filter-priority-button">
+              all
+              <div class="navigation__search_filter-priority-button__icon">
+                &#9650;
+              </div>
+            </div>
+            <div class="navigation__search_filter-priority-content">
+              <span>hight</span>
+              <span>normal</span>
+              <span>low</span>
+            </div>
+          </div>
         </form>
         <button class="navigation__button-create">Create</button>
       </div>
+      <!-- NAVIGATION END-->
+
+      <!-- CARDS LIST BEGIN-->
       <div class="cards-list">
-        <div class="card">
-          <div class="card-title">some title</div>
-          <div class="card-content">some text text text</div>
-        </div>
+        <!-- <div class="card-wrapper">
+          <div class="card">
+            <div class="card-title">some title</div>
+            <div class="card-content">some text text text</div>
+            <div class="card__footer">
+              <div class="card__footer-priority">hight</div>
+              <div class="card__footer-dropdown__navigation">
+                <button class="card__footer-dropdown__navigation-button">
+                  ...
+                </button>
+                <div class="card__footer-dropdown__navigation-content">
+                  <button>done</button>
+                  <button>edit</button>
+                  <button>delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
       </div>
+      <!-- CARDS LIST BEGIN-->
     </section>
     <section class="footer">Oleh Hnapovskyi</section>
     <script src="main.js"></script>

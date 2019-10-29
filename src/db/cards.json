@@ -1,0 +1,26 @@
+[
+  {
+    "title": "execute text task",
+    "text": "Ciklum internship",
+    "priority": "low",
+    "done": false
+  },
+  {
+    "title": "Lern javascript",
+    "text": "",
+    "priority": "hight",
+    "done": false
+  },
+  {
+    "title": "apply intership",
+    "text": "send email",
+    "priority": "normal",
+    "done": true
+  },
+  {
+    "title": "text",
+    "text": "some text text",
+    "priority": "low",
+    "done": false
+  }
+]
