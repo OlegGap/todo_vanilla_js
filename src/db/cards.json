@@ -1,26 +1,60 @@
-[
-  {
-    "title": "execute text task",
-    "text": "Ciklum internship",
-    "priority": "low",
-    "done": false
-  },
-  {
-    "title": "Lern javascript",
-    "text": "",
-    "priority": "hight",
-    "done": false
-  },
-  {
-    "title": "apply intership",
-    "text": "send email",
-    "priority": "normal",
-    "done": true
-  },
-  {
-    "title": "text",
-    "text": "some text text",
-    "priority": "low",
-    "done": false
-  }
-]
+{
+  "allCards": [
+    {
+      "title": "execute text task",
+      "text": "Ciklum internship",
+      "priority": "low",
+      "status": "open",
+      "id": "dfsr45656njn6767k5"
+    },
+    {
+      "title": "Lern javascript",
+      "text": "",
+      "priority": "hight",
+      "status": "open",
+      "id": "dfsr45656njn6esfrh"
+    },
+    {
+      "title": "apply intership",
+      "text": "send email",
+      "priority": "normal",
+      "status": "done",
+      "id": "dfsr45656njn67yrtut"
+    },
+    {
+      "title": "text",
+      "text": "some text text",
+      "priority": "low",
+      "status": "open",
+      "id": "dfsr45656njn64354tg"
+    },
+    {
+      "title": "execute text task",
+      "text": "Ciklum internship",
+      "priority": "low",
+      "status": "open",
+      "id": "dfsr4565dstfddtre67k5"
+    },
+    {
+      "title": "Lern javascript",
+      "text": "",
+      "priority": "hight",
+      "status": "open",
+      "id": "dfsr45656dfyr654"
+    },
+    {
+      "title": "apply intership",
+      "text": "send email",
+      "priority": "normal",
+      "status": "done",
+      "id": "dfsr45656nrtffgf546"
+    },
+    {
+      "title": "text",
+      "text": "some text text",
+      "priority": "low",
+      "status": "open",
+      "id": "dfsr45656rdgftsre4354df"
+    }
+  ]
+}
