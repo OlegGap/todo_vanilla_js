@@ -125,3 +125,26 @@ function hundleDeleteCard(id) {
   });
   loadCards(allCards.filter(card => card.id !== id));
 }
+
+const popupContainer = document.querySelector('.popup-container');
+document
+  .querySelector('.navigation__button-create')
+  .addEventListener('click', () => (popupContainer.style.display = 'flex'));
+
+window.addEventListener('click', element => {
+  if (element.target === popupContainer) popupContainer.style.display = 'none';
+});
+
+const hundleCreateCardChangeStatus = ({ target }) => {
+  const currentSelector = filterStatusCurrentNode.childNodes[0].nodeValue.trim();
+  filterStatusCurrentNode.childNodes[0].nodeValue = target.innerText;
+
+  filters.status = target.innerText;
+  applyFilter(filters, allCards);
+
+  target.innerText = currentSelector;
+};
+const createCardStatusContentNode = document.querySelector(
+  '.navigation__search_filter-status-content',
+);
+filterStatusContentNode.addEventListener('click', hundleChangeStatus);
