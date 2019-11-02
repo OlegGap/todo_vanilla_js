@@ -5,30 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TODO List</title>
-  <link href="style.css?745ff5ba0b29236fb4a5" rel="stylesheet"></head>
+  <link href="style.css?ee37e82babf89d26bfd4" rel="stylesheet"></head>
   <body>
     <section class="header">TODOList</section>
     <section class="content">
+      <!-- NAVIGATION BEGIN-->
       <div class="navigation">
         <form class="navigation__search">
           <input
             type="text"
+            name="search"
             class="navigation__search-input"
             placeholder="search by title"
           />
-          <input type="text" class="navigation__search_filter-status" />
-          <input type="text" class="navigation__search_filter-priority" />
+          <div class="navigation__search_filter-status">
+            <div class="navigation__search_filter-status-button">
+              all
+              <div class="navigation__search_filter-status-button__icon">
+                &#9650;
+              </div>
+            </div>
+            <div class="navigation__search_filter-status-content">
+              <span>open</span>
+              <span>done</span>
+            </div>
+          </div>
+          <div class="navigation__search_filter-priority">
+            <div class="navigation__search_filter-priority-button">
+              all
+              <div class="navigation__search_filter-priority-button__icon">
+                &#9650;
+              </div>
+            </div>
+            <div class="navigation__search_filter-priority-content">
+              <span>hight</span>
+              <span>normal</span>
+              <span>low</span>
+            </div>
+          </div>
         </form>
         <button class="navigation__button-create">Create</button>
       </div>
+      <!-- NAVIGATION END-->
+
+      <!-- CARDS LIST BEGIN-->
       <div class="cards-list">
-        <div class="card">
-          <div class="card-title">some title</div>
-          <div class="card-content">some text text text</div>
+        <!-- <div class="card-wrapper">
+          <div class="card">
+            <div class="card-title">some title</div>
+            <div class="card-content">some text text text</div>
+            <div class="card__footer">
+              <div class="card__footer-priority">hight</div>
+              <div class="card__footer-dropdown__navigation">
+                <button class="card__footer-dropdown__navigation-button">
+                  ...
+                </button>
+                <div class="card__footer-dropdown__navigation-content">
+                  <button>done</button>
+                  <button>edit</button>
+                  <button>delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- CARDS LIST BEGIN-->
+      <div class="popup-container">
+        <div class="popup">
+          <form class="popup__form" id="popup-form">
+              Title:</br>
+              <div class="popup__form-title-error"></div>
+              <input type="text" name="title" class="popup__form-title" placeholder="Title"/></br>
+              
+              Description:</br>
+              <textarea type="text" name="description" class="popup__form-description" placeholder="Description"></textarea></br>
+              Priority:</br>
+              <div class="popup__form-priority">
+                  <div class="popup__form-priority-button">
+                      Hight
+                    <div class="popup__form-priority-button__icon">
+                      &#9650;
+                    </div>
+                  </div>
+                  <div class="popup__form-priority-content">
+                    <span>Normal</span>
+                    <span>Low</span>
+                  </div>
+                </div>
+                <div class="popup__form-button">
+                  <button class="popup__form-button-cancel">Cancel</button>
+                  <button class="popup__form-button-save" type="submit" form="popup-form">Save</button>
+                </div>
+          </form>
         </div>
       </div>
     </section>
     <section class="footer">Oleh Hnapovskyi</section>
     <script src="main.js"></script>
-  <script type="text/javascript" src="build.js?745ff5ba0b29236fb4a5"></script></body>
+  <script type="text/javascript" src="build.js?ee37e82babf89d26bfd4"></script></body>
 </html>

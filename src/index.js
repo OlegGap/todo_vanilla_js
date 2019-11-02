@@ -7,7 +7,7 @@ const filters = {
   priority: 'all',
 };
 
-const applyFilter = (newFilters, cards) => {
+function applyFilter(newFilters, cards) {
   let resultCurds = cards.slice(0);
 
   if (newFilters.value !== '') {
@@ -23,23 +23,26 @@ const applyFilter = (newFilters, cards) => {
     );
   }
   loadCards(resultCurds);
-};
+}
 
-const hundleCardSearch = event => {
+document
+  .querySelector('.navigation__search')
+  .addEventListener('submit', hundleCardSearch);
+
+function hundleCardSearch(event) {
   event.preventDefault();
   filters.value = event.target.querySelector('input[name="search"]').value;
   applyFilter(filters, allCards);
-};
-const serchForm = document.querySelector('.navigation__search');
-serchForm.addEventListener('submit', hundleCardSearch);
+}
 
-const filterStatusContentNode = document.querySelector(
-  '.navigation__search_filter-status-content',
-);
+document
+  .querySelector('.navigation__search_filter-status-content')
+  .addEventListener('click', hundleChangeStatus);
+
 const filterStatusCurrentNode = document.querySelector(
   '.navigation__search_filter-status-button',
 );
-const hundleChangeStatus = ({ target }) => {
+function hundleChangeStatus({ target }) {
   const currentSelector = filterStatusCurrentNode.childNodes[0].nodeValue.trim();
   filterStatusCurrentNode.childNodes[0].nodeValue = target.innerText;
 
@@ -47,16 +50,16 @@ const hundleChangeStatus = ({ target }) => {
   applyFilter(filters, allCards);
 
   target.innerText = currentSelector;
-};
-filterStatusContentNode.addEventListener('click', hundleChangeStatus);
+}
 
-const filterPriorityContentNode = document.querySelector(
-  '.navigation__search_filter-priority-content',
-);
+document
+  .querySelector('.navigation__search_filter-priority-content')
+  .addEventListener('click', hundleChangePriority);
+loadCards(allCards);
 const filterPriorityCurrentNode = document.querySelector(
   '.navigation__search_filter-priority-button',
 );
-const hundleChangePriority = ({ target }) => {
+function hundleChangePriority({ target }) {
   const currentSelector = filterPriorityCurrentNode.childNodes[0].nodeValue.trim();
   filterPriorityCurrentNode.childNodes[0].nodeValue = target.innerText;
 
@@ -64,9 +67,7 @@ const hundleChangePriority = ({ target }) => {
   applyFilter(filters, allCards);
 
   target.innerText = currentSelector;
-};
-filterPriorityContentNode.addEventListener('click', hundleChangePriority);
-loadCards(allCards);
+}
 
 function loadCards(cards) {
   const cardsList = document.querySelector('.cards-list');
@@ -135,16 +136,64 @@ window.addEventListener('click', element => {
   if (element.target === popupContainer) popupContainer.style.display = 'none';
 });
 
-const hundleCreateCardChangeStatus = ({ target }) => {
-  const currentSelector = filterStatusCurrentNode.childNodes[0].nodeValue.trim();
-  filterStatusCurrentNode.childNodes[0].nodeValue = target.innerText;
+const popupPriorityCurrentNode = document.querySelector(
+  '.popup__form-priority-button',
+);
 
-  filters.status = target.innerText;
-  applyFilter(filters, allCards);
+function hundleCreateCardChangePriority({ target }) {
+  const currentSelector = popupPriorityCurrentNode.childNodes[0].nodeValue.trim();
+
+  popupPriorityCurrentNode.childNodes[0].nodeValue = target.innerText;
 
   target.innerText = currentSelector;
-};
-const createCardStatusContentNode = document.querySelector(
-  '.navigation__search_filter-status-content',
-);
-filterStatusContentNode.addEventListener('click', hundleChangeStatus);
+}
+
+document
+  .querySelector('.popup__form-priority-content')
+  .addEventListener('click', hundleCreateCardChangePriority);
+
+const popupFormTitleError = document.querySelector('.popup__form-title-error');
+
+document
+  .querySelector('.popup__form-button-cancel')
+  .addEventListener('click', () => {
+    popupContainer.style.display = 'none';
+  });
+
+document
+  .querySelector('.popup__form')
+  .addEventListener('submit', hundleSubmitPopupForm);
+
+function hundleSubmitPopupForm(evt) {
+  evt.preventDefault();
+  const currentTitle = evt.target.querySelector('.popup__form-title').value;
+  const currentDescription = evt.target.querySelector(
+    '.popup__form-description',
+  ).value;
+
+  if (currentTitle.length) {
+    popupFormTitleError.style.display = 'none';
+    const resultCard = {
+      title: currentTitle,
+      text: currentDescription,
+      priority: popupPriorityCurrentNode.childNodes[0].nodeValue
+        .trim()
+        .toLowerCase(),
+      status: 'open',
+      id:
+        Math.random()
+          .toString(36)
+          .substring(2, 15) +
+        Math.random()
+          .toString(36)
+          .substring(2, 15),
+    };
+    allCards.push(resultCard);
+    loadCards(allCards);
+    evt.target.reset();
+    popupContainer.style.display = 'none';
+  } else {
+    popupFormTitleError.innerText = 'Input title!';
+    popupFormTitleError.style.display = 'block';
+  }
+}

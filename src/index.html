@@ -73,9 +73,11 @@
       <!-- CARDS LIST BEGIN-->
       <div class="popup-container">
         <div class="popup">
-          <form class="popup__form">
+          <form class="popup__form" id="popup-form">
               Title:</br>
+              <div class="popup__form-title-error"></div>
               <input type="text" name="title" class="popup__form-title" placeholder="Title"/></br>
+              
               Description:</br>
               <textarea type="text" name="description" class="popup__form-description" placeholder="Description"></textarea></br>
               Priority:</br>
@@ -93,7 +95,7 @@
                 </div>
                 <div class="popup__form-button">
                   <button class="popup__form-button-cancel">Cancel</button>
-                  <button class="popup__form-button-save">Save</button>
+                  <button class="popup__form-button-save" type="submit" form="popup-form">Save</button>
                 </div>
           </form>
         </div>

@@ -1,6 +1,7 @@
 .cards-list {
   margin: 50px 0 120px 0;
-  width: 80%;
+  width: 1040px;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -50,7 +51,8 @@
           text-align: center;
           border-radius: 10px;
         }
-        &-dropdown__navigation:hover .card__footer-dropdown__navigation-content {
+        &-dropdown__navigation:hover
+          .card__footer-dropdown__navigation-content {
           display: block;
         }
         &-dropdown__navigation {
