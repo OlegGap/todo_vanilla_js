@@ -11,6 +11,3 @@
 
 * `$ yarn deploy` or `$ npm run deploy`
 
-
-
-Production [here](https://oleggap.github.io/todo_vanilla_js/build/index.html)
