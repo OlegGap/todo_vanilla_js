@@ -1,13 +1,15 @@
-# todo_vanilla_js
+This repository hosts the basic content, structure and theme for the BMW Developer Portal website.
+
+---
+
+# For start:
 
 ###### For start:
 
-* `$ yarn install` or `$ npm i`
+- `$ yarn install`
 
-* `$ yarn dev` or `$ npm run dev`
+- `$ yarn start`
 
-###### Deploy:
+###### For start storybook:
 
-
-* `$ yarn deploy` or `$ npm run deploy`
-
+- `$ yarn storybook`
